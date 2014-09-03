@@ -1,0 +1,4 @@
+date=`date +%Y%m%d`
+file='back'$date'.tgz'
+tar czf $file ROOT --exclude=*.jar
+chmod 400 $file

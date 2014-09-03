@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+<tiles-definitions>
+
+	<!-- Reports -->
+	<definition name="portlet.ext.reports.view" extends="portlet">
+		<put name="portlet_content" value="/portlet/ext/reports/view.jsp" />
+	</definition>
+	<definition name="portlet.ext.reports.view_reports" extends="portlet">
+		<put name="portlet_content" value="/portlet/ext/reports/view_reports.jsp" />
+	</definition>
+
+	<!-- My Account(Sign Up) -->
+
+	<definition name="portlet.sign-up.sign-up" extends="portlet">
+		<put name="portlet_content" value="/agloco/sign_up/sign-up.jsp" />
+	</definition>
+
+
+	<definition name="portlet.sign.up.referral" extends="portlet">
+		<put name="portlet_content" value="/agloco/sign_up/sign_up_referral.jsp" />
+	</definition>
+
+	<definition name="portlet.sign-up.sign-up.finished" extends="portlet">
+		<put name="portlet_content" value="/agloco/sign_up/sign-up-finished.jsp" />
+	</definition>
+
+	<definition name="portlet.sign-up.sign-up.step2.temp" extends="portlet">
+		<put name="portlet_content" value="/agloco/sign_up/sign_up_step2_temp.jsp" />
+	</definition>
+	
+	<definition name="portlet.sign-up.change.email.address" extends="portlet">
+		<put name="portlet_content" value="/agloco/sign_up/change_email_address.jsp" />
+	</definition>
+
+	<!-- My Profile -->
+	<definition name="portlet.my_profile.my_profile" extends="portlet">
+		<put name="portlet_content" value="/agloco/my_profile/my_profile.jsp"></put>
+	</definition>
+	<definition name="portlet.my_profile.my_profile_saved" extends="portlet">
+		<put name="portlet_content" value="/agloco/my_profile/my_profile_saved.jsp"></put>
+	</definition>
+
+	<definition name="portlet.my_profile.my_profile_change_password" extends="portlet">
+		<put name="portlet_content" value="/agloco/my_profile/my_profile_change_password.jsp"></put>
+	</definition>
+
+	<definition name="portlet.my_profile.my_profile_change_email" extends="portlet">
+		<put name="portlet_content" value="/agloco/my_profile/my_profile_change_email.jsp"></put>
+	</definition>
+
+	<!-- Sign In -->
+
+	<definition name="portlet.signin" extends="portlet" />
+
+	<definition name="portlet.signin.view" extends="portlet.signin">
+		<put name="portlet_content" value="/agloco/sign_in/view.jsp" />
+	</definition>
+
+	<!-- Forget Password -->
+
+	<definition name="portal.forgetpwd" extends="portal">
+		<put name="title" value="sign-in" />
+		<put name="content" value="/agloco/sign_in/forgetpwd.jsp" />
+	</definition>
+	<definition name="portlet.forgetinfo" extends="portlet" />
+	<definition name="portlet.forgetinfo.forgetinfo" extends="portlet.forgetinfo">
+		<put name="portlet_content" value="/agloco/forgetinformation/forgetInformation.jsp" />
+	</definition>
+	<definition name="portlet.forgetinfo.sendpassword" extends="portlet.forgetinfo">
+		<put name="portlet_content" value="/agloco/forgetinformation/forgotPwdSent.jsp" />
+	</definition>
+	<definition name="portlet.forgetinfo.sendmembercode" extends="portlet.forgetinfo">
+		<put name="portlet_content" value="/agloco/forgetinformation/forgotMCSent.jsp" />
+	</definition>
+
+	<!-- My Account -->
+	<definition name="portlet.ag_account.view" extends="portlet">
+		<put name="portlet_content" value="/agloco/my_account/view.jsp"></put>
+	</definition>
+
+	<!-- Clear Cache -->
+	<definition name="portlet.clearcache" extends="portlet" />
+
+	<definition name="portlet.clearcache.error" extends="portlet.clearcache">
+		<put name="portlet_content" value="/agloco/clearcache/error.jsp" />
+	</definition>
+
+	<definition name="portlet.clearcache.view" extends="portlet.clearcache">
+		<put name="portlet_content" value="/agloco/clearcache/view.jsp" />
+	</definition>
+
+	<!-- Report Query -->
+	<definition name="portlet.report" extends="portlet" />
+
+	<definition name="portlet.report.query" extends="portlet.report">
+		<put name="portlet_content" value="/agloco/report/query.jsp" />
+	</definition>
+
+	<definition name="portlet.report.newquery" extends="portlet.report">
+		<put name="portlet_content" value="/agloco/report/newquery.jsp" />
+	</definition>
+	
+	<!-- DecryptMemberInfo -->
+	<definition name="portlet.decryptmemberinfo" extends="portlet" />
+
+	<definition name="portlet.decryptmemberinfo.view" extends="portlet.decryptmemberinfo">
+		<put name="portlet_content" value="/agloco/decryptmemberinfo/view.jsp" />
+	</definition>
+	
+	<!-- suspend member -->
+	<definition name="portlet.suspend.member" extends="portlet">
+		<put name="portlet_content" value="/agloco/management/suspend_member.jsp" />
+	</definition>
+	
+	<!-- Member Management -->
+	<definition name="portlet.membermanagement" extends="portlet" />
+
+	<definition name="portlet.membermanagement.view" extends="portlet.membermanagement">
+		<put name="portlet_content" value="/agloco/management/memberList.jsp" />
+	</definition>
+
+	<definition name="portlet.membermanagement.detail" extends="portlet.membermanagement">
+		<put name="portlet_content" value="/agloco/management/detailInfo.jsp" />
+	</definition>
+	
+	<!-- manage config -->
+	<definition name="portlet.manage.config" extends="portlet">
+		<put name="portlet_content" value="/agloco/management/manage_config.jsp" />
+	</definition>
+
+	<!-- Send Test Mail -->
+	<definition name="portlet.testmail.view" extends="portlet">
+		<put name="portlet_content" value="/agloco/testmail/view.jsp" />
+	</definition>
+	
+	<!-- manage mail message -->
+	<definition name="portlet.list.mail.queue" extends="portlet">
+		<put name="portlet_content" value="/agloco/management/list_mail_queue.jsp" />
+	</definition>
+	<definition name="portlet.view.mail.message" extends="portlet">
+		<put name="portlet_content" value="/agloco/management/view_mail_message.jsp" />
+	</definition>
+	
+	<!-- log view -->
+	<definition name="portlet.log.view" extends="portlet">
+		<put name="portlet_content" value="/agloco/log/view.jsp" />
+	</definition>
+
+	<!-- add admin -->
+	<definition name="portlet.addmin.user.list" extends="portlet">
+		<put name="portlet_content" value="/agloco/addadmin/list_admin_user.jsp" />
+	</definition>
+	
+	<definition name="portlet.addmin.user.add" extends="portlet">
+		<put name="portlet_content" value="/agloco/addadmin/add_admin_user.jsp" />
+	</definition>
+	
+	<definition name="portlet.addmin.user.edit" extends="portlet">
+		<put name="portlet_content" value="/agloco/addadmin/edit_admin_user.jsp" />
+	</definition>
+	
+</tiles-definitions>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping package="com.mysql.encrypt.po">
+	<class name="HUser" table="TT_Encrypt" lazy="true" 
+		dynamic-update="true" dynamic-insert="true"
+	>
+
+		<id name="id" type="java.lang.Long" column="id">
+			<generator class="identity"></generator>
+		</id>
+
+    <property name="name" formula="AES_DECRYPT(name, 'agloco')"/>
+    <property name="password" formula="AES_DECRYPT(password, 'agloco')"/>
+
+    <property name="encName" column="name"/>
+    <property name="encPassword" column="password"/>
+
+    <!--property name="name" column="name"/>
+    <property name="password" column="password"/-->
+
+	</class>
+</hibernate-mapping>

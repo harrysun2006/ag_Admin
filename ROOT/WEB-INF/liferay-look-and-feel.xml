@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<!DOCTYPE look-and-feel PUBLIC "-//Liferay//DTD Look and Feel 4.0.0//EN" "http://www.liferay.com/dtd/liferay-look-and-feel_4_0_0.dtd">
+
+<look-and-feel>
+	<compatibility>
+		<version>4.1.0</version>
+	</compatibility>
+	<company-limit>
+		<company-includes />
+		<company-excludes />
+	</company-limit>
+	<theme id="agloco" name="Agloco">
+		<root-path>/html/themes/agloco</root-path>
+		<templates-path>/html/themes/agloco/templates</templates-path>
+		<images-path>/html/themes/agloco/images</images-path>
+		<template-extension>jsp</template-extension>
+		<color-scheme id="01" name="Default">
+			<![CDATA[
+				body-bg=#FFFFFF
+				
+				layout-bg=#F2F2F2
+				layout-text=#000000
+
+				layout-tab-bg=#E0E0E0
+				layout-tab-text=#000000
+
+				layout-tab-selected-bg=#6699CC
+				layout-tab-selected-text=#4A517D
+
+				portlet-title-bg=#6699CC
+				portlet-title-text=#000000
+
+				portlet-menu-bg=#B6CBEB
+				portlet-menu-text=#000000
+
+				portlet-bg=#F2F2F2
+
+				portlet-font=#000000
+				portlet-font-dim=#C4C4C4
+
+				portlet-msg-status=#000000
+				portlet-msg-info=#000000
+				portlet-msg-error=#FF0000
+				portlet-msg-alert=#FF0000
+				portlet-msg-success=#007F00
+
+				portlet-section-header=#596171
+				portlet-section-header-bg=#AFBEDA
+
+				portlet-section-subheader=#405278
+				portlet-section-subheader-bg=#91AEE8
+
+				portlet-section-body=#3F3F3F
+				portlet-section-body-bg=#EAF2FF
+
+				portlet-section-body-hover=#FFFFFF
+				portlet-section-body-hover-bg=#5274AE
+
+				portlet-section-alternate=#3F3F3F
+				portlet-section-alternate-bg=#DBE1ED
+
+				portlet-section-alternate-hover=#FFFFFF
+				portlet-section-alternate-hover-bg=#5274AE
+
+				portlet-section-selected=#7AA0EC
+				portlet-section-selected-bg=#FAFCFE
+
+				portlet-section-selected-hover=#00329A
+				portlet-section-selected-hover-bg=#C0D2F7
+			]]>
+		</color-scheme>
+	</theme>
+</look-and-feel>

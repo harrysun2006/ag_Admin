@@ -1,0 +1,194 @@
+<?xml version="1.0"?>
+<!DOCTYPE liferay-portlet-app PUBLIC "-//Liferay//DTD Portlet Application 4.1.0//EN" "http://www.liferay.com/dtd/liferay-portlet-app_4_1_0.dtd">
+
+<liferay-portlet-app>
+
+	<!-- Custom Portlets -->
+
+	<portlet>
+		<portlet-name>EXT_1</portlet-name>
+		<struts-path>ext/reports</struts-path>
+		<use-default-template>false</use-default-template>
+	</portlet>
+	<portlet>
+		<portlet-name>ag1</portlet-name>
+		<struts-path>forgetinfo</struts-path>
+		<portlet-url-class>com.liferay.portal.struts.StrutsActionPortletURL</portlet-url-class>
+		<use-default-template>false</use-default-template>
+		<restore-current-view>false</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+	</portlet>
+	<portlet>
+		<portlet-name>ag2</portlet-name>
+		<struts-path>signin</struts-path>
+		<use-default-template>false</use-default-template>
+		<restore-current-view>false</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+	</portlet>
+
+	<portlet>
+		<portlet-name>ag3</portlet-name>
+		<struts-path>my_profile</struts-path>
+		<portlet-url-class>com.liferay.portal.struts.StrutsActionPortletURL</portlet-url-class>
+		<use-default-template>false</use-default-template>
+		<restore-current-view>false</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+	</portlet>
+
+	<portlet>
+		<portlet-name>ag4</portlet-name>
+		<struts-path>ag_account</struts-path>
+		<portlet-url-class>com.liferay.portal.struts.StrutsActionPortletURL</portlet-url-class>
+		<use-default-template>false</use-default-template>
+		<restore-current-view>false</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+	</portlet>
+
+	<portlet>
+		<portlet-name>ag5</portlet-name>
+		<struts-path>my_profile</struts-path>
+		<portlet-url-class>com.liferay.portal.struts.StrutsActionPortletURL</portlet-url-class>
+		<use-default-template>false</use-default-template>
+		<restore-current-view>false</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+	</portlet>
+
+	<portlet>
+		<portlet-name>ag6</portlet-name>
+		<struts-path>my_profile</struts-path>
+		<portlet-url-class>com.liferay.portal.struts.StrutsActionPortletURL</portlet-url-class>
+		<use-default-template>false</use-default-template>
+		<restore-current-view>false</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+	</portlet>
+
+	<portlet>
+		<portlet-name>ag7</portlet-name>
+		<struts-path>clearcache</struts-path>
+		<portlet-url-class>com.liferay.portal.struts.StrutsActionPortletURL</portlet-url-class>
+		<use-default-template>false</use-default-template>
+		<restore-current-view>false</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+	</portlet>
+
+	<portlet>
+		<portlet-name>ag8</portlet-name>
+		<struts-path>report</struts-path>
+		<portlet-url-class>com.liferay.portal.struts.StrutsActionPortletURL</portlet-url-class>
+		<use-default-template>false</use-default-template>
+		<restore-current-view>false</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+	</portlet>
+
+	<portlet>
+		<portlet-name>ag9</portlet-name>
+		<struts-path>decryptmemberinfo</struts-path>
+		<portlet-url-class>com.liferay.portal.struts.StrutsActionPortletURL</portlet-url-class>
+		<use-default-template>false</use-default-template>
+		<restore-current-view>false</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+	</portlet>
+	
+	<portlet>
+		<portlet-name>ag10</portlet-name>
+		<struts-path>suspend_member</struts-path>
+		<portlet-url-class>com.liferay.portal.struts.StrutsActionPortletURL</portlet-url-class>
+		<use-default-template>false</use-default-template>
+		<restore-current-view>false</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+	</portlet>
+	
+	<portlet>
+		<portlet-name>ag11</portlet-name>
+		<struts-path>membermanagement</struts-path>
+		<portlet-url-class>com.liferay.portal.struts.StrutsActionPortletURL</portlet-url-class>
+		<use-default-template>false</use-default-template>
+		<restore-current-view>false</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+	</portlet>
+
+	<portlet>
+		<portlet-name>ag12</portlet-name>
+		<struts-path>testmail</struts-path>
+		<portlet-url-class>com.liferay.portal.struts.StrutsActionPortletURL</portlet-url-class>
+		<use-default-template>false</use-default-template>
+		<restore-current-view>false</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+	</portlet>
+	
+	<portlet>
+		<portlet-name>ag13</portlet-name>
+		<struts-path>manage_config</struts-path>
+		<portlet-url-class>com.liferay.portal.struts.StrutsActionPortletURL</portlet-url-class>
+		<use-default-template>false</use-default-template>
+		<restore-current-view>false</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+	</portlet>
+
+	<portlet>
+		<portlet-name>ag14</portlet-name>
+		<struts-path>manage_mail_queue</struts-path>
+		<portlet-url-class>com.liferay.portal.struts.StrutsActionPortletURL</portlet-url-class>
+		<use-default-template>false</use-default-template>
+		<restore-current-view>false</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+	</portlet>
+	
+	<portlet>
+		<portlet-name>ag15</portlet-name>
+		<struts-path>sign_up_change_email</struts-path>
+		<portlet-url-class>com.liferay.portal.struts.StrutsActionPortletURL</portlet-url-class>
+		<use-default-template>false</use-default-template>
+		<restore-current-view>false</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+	</portlet>
+	
+	<portlet>
+		<portlet-name>ag16</portlet-name>
+		<struts-path>log</struts-path>
+		<portlet-url-class>com.liferay.portal.struts.StrutsActionPortletURL</portlet-url-class>
+		<use-default-template>false</use-default-template>
+		<restore-current-view>false</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+	</portlet>
+	
+	<portlet>
+		<portlet-name>ag17</portlet-name>
+		<struts-path>admin_user</struts-path>
+		<portlet-url-class>com.liferay.portal.struts.StrutsActionPortletURL</portlet-url-class>
+		<use-default-template>false</use-default-template>
+		<restore-current-view>false</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+	</portlet>
+	<!--
+		Liferay Portlets
+		
+		To create a minimal installation of Liferay so that only the essential
+		Liferay portlets are available, uncomment the following block.
+		
+		To make a portlet available, set the include attribute to true. The
+		struts-path attribute is shown so that it's easier for the editor of this
+		file to associate a portlet id with a portlet.
+	-->
+
+	<role-mapper>
+		<role-name>guest</role-name>
+		<role-link>Guest</role-link>
+	</role-mapper>
+	<role-mapper>
+		<role-name>administrator</role-name>
+		<role-link>Administrator</role-link>
+	</role-mapper>
+	<role-mapper>
+		<role-name>power-user</role-name>
+		<role-link>Power User</role-link>
+	</role-mapper>
+	<role-mapper>
+		<role-name>user</role-name>
+		<role-link>User</role-link>
+	</role-mapper>
+	<custom-user-attribute>
+		<name>user.name.random</name>
+		<custom-class>com.liferay.portlet.CustomUserAttributes</custom-class>
+	</custom-user-attribute>
+</liferay-portlet-app>

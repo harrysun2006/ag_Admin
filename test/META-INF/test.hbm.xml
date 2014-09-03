@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false">
+
+	<class name="com.test.model.DynaTable1" table="AA_DynaTable1" dynamic-update="true" dynamic-insert="true">
+		<cache usage="read-write" />
+		<id name="id" column="id" type="java.lang.Long">
+			<generator class="identity">
+			</generator>
+		</id>
+		<property name="name" column="name" type="java.lang.String" length="100" not-null="true"/>
+		<!--sql-insert>INSERT INTO AA_DynaTable1 (id, name) VALUES (?, ? )</sql-insert-->
+	</class>
+
+	<!--
+	<class name="com.test.model.DynaTable2" table="AA_DynaTable2" dynamic-update="true" dynamic-insert="true">
+		<cache usage="read-write" />
+		<id name="id" column="id" type="java.lang.Long">
+			<generator class="identity">
+			</generator>
+		</id>
+		<property name="name" column="name" type="java.lang.String" length="100" not-null="true"/>
+	</class>
+	-->
+
+</hibernate-mapping>

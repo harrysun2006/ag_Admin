@@ -1,0 +1,207 @@
+<?xml version="1.0"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="foodItemForm" type="com.sample.fooditem2.vo.FoodItemForm" />
+		<form-bean name="signUpFrm" type="com.agloco.form.SignUpForm" />
+		<form-bean name="myProfileForm" type="com.agloco.form.MyProfileForm" />
+		<form-bean name="myProfileChangePasswordForm" type="com.agloco.form.MyProfileChangePasswordForm" />
+		<form-bean name="myProfileChangeEmailForm" type="com.agloco.form.MyProfileChangeEmailForm" />
+		<form-bean name="decryptMemberInfoForm" type="com.agloco.form.DecryptMemberInfoForm" />
+		<form-bean name="memberQueryForm" type="com.agloco.form.MemberQueryForm" />
+		<form-bean name="testMailForm" type="com.agloco.form.TestMailForm" />
+		<form-bean name="changeEmailForm" type="com.agloco.form.ChangeEmailForm" />
+		<form-bean name="logMessageForm" type="com.agloco.form.LogMessageForm" />
+	</form-beans>
+
+	<global-forwards>
+		<forward name="portal.login" path="portlet.signin.view" />
+	</global-forwards>
+
+	<action-mappings>
+		<!-- Reports -->
+		<action path="/ext/reports/view_reports"
+			type="com.ext.portlet.reports.action.ViewReportsAction">
+			<forward name="portlet.ext.reports.view"
+				path="portlet.ext.reports.view" />
+			<forward name="portlet.ext.reports.view_reports"
+				path="portlet.ext.reports.view_reports" />
+		</action>
+
+		<!-- My Account -->
+		<action path="/my_account/sign-up"
+			type="com.agloco.action.SignUpAction" name="signUpFrm"
+			scope="request" validate="false" parameter="command">
+			<forward name="portlet.sign-up.sign-up"
+				path="portlet.sign-up.sign-up" />
+			<forward name="portlet.sign.up.referral"
+				path="portlet.sign.up.referral" />
+			<forward name="portlet.sign-up.sign-up.finished"
+				path="portlet.sign-up.sign-up.finished" />
+			<forward name="portlet.sign-up.sign-up.step2.temp"
+				path="portlet.sign-up.sign-up.step2.temp" />
+		</action>
+
+		<action path="/sign_up_change_email/view" type="com.agloco.action.ChangeEmailAddressAction" name="changeEmailForm">
+			<forward name="portlet.sign-up.change.email.address" path="portlet.sign-up.change.email.address" />
+			<forward name="portlet.sign-up.sign-up.finished" path="portlet.sign-up.sign-up.finished" />
+			<forward name="portlet.sign-up.sign-up.step2.temp" path="portlet.sign-up.sign-up.step2.temp" />
+		</action>
+
+		<!-- Forget password -->
+		<action path="/forgetinfo/captcha"
+			type="com.liferay.portal.captcha.CaptchaAction" />
+		<action path="/forgetinfo/agcaptcha"
+			type="com.agloco.action.AGCaptchaAction" />
+
+		<action path="/forgetinfo/forgetinfo"
+			type="com.agloco.action.GetInfromationAction">
+			<forward name="portlet.forgetinfo.forgetinfo"
+				path="portlet.forgetinfo.forgetinfo" />
+			<forward name="portlet.forgetinfo.sendpassword"
+				path="portlet.forgetinfo.sendpassword" />
+			<forward name="portlet.forgetinfo.sendmembercode"
+				path="portlet.forgetinfo.sendmembercode" />
+		</action>
+
+		<!-- Sign in -->
+		<action path="/sign_in/view"
+			type="com.agloco.action.SignInAction">
+			<forward name="portal.login" path="portlet.signin.view" />
+		</action>
+
+		<!--  My Profile -->
+		<action path="/my_profile/captcha"
+			type="com.liferay.portal.captcha.CaptchaAction" />
+		<action path="/my_profile/my_profile"
+			type="com.agloco.action.MyProfileAction" name="myProfileForm"
+			scope="request">
+			<forward name="portlet.my_profile.my_profile"
+				path="portlet.my_profile.my_profile">
+			</forward>
+			<forward name="portlet.my_profile.my_profile_saved"
+				path="portlet.my_profile.my_profile_saved">
+			</forward>
+			<forward name="portal.login" path="portal.login"></forward>
+		</action>
+		<action path="/my_profile/my_profile_change_password"
+			type="com.agloco.action.MyProfileChangePasswordAction"
+			name="myProfileChangePasswordForm" scope="request">
+			<forward
+				name="portlet.my_profile.my_profile_change_password"
+				path="portlet.my_profile.my_profile_change_password">
+			</forward>
+			<forward name="portlet.my_profile.my_profile_saved"
+				path="portlet.my_profile.my_profile_saved">
+			</forward>
+		</action>
+		<action path="/my_profile/my_profile_change_email"
+			type="com.agloco.action.MyProfileChangeEmailAction"
+			name="myProfileChangeEmailForm" scope="request">
+			<forward name="portlet.my_profile.my_profile_change_email"
+				path="portlet.my_profile.my_profile_change_email">
+			</forward>
+			<forward name="portlet.my_profile.my_profile_saved"
+				path="portlet.my_profile.my_profile_saved">
+			</forward>
+		</action>
+
+		<!-- Ag Account -->
+		<action path="/ag_account/view"
+			type="com.agloco.action.MyAccountAction">
+			<forward name="portlet.ag_account.view"
+				path="portlet.ag_account.view" />
+		</action>
+
+		<!-- Clear Cache -->
+		<action path="/clearcache/view"
+			forward="portlet.clearcache.view" />
+		<action path="/clearcache/edit_server"
+			type="com.agloco.action.EditServerAction">
+			<forward name="portlet.clearcache.error"
+				path="portlet.clearcache.error" />
+		</action>
+
+		<!-- Report Query -->
+		<action path="/report/query"
+			type="com.agloco.action.ReportQueryAction">
+			<forward name="portlet.report.query"
+				path="portlet.report.query" />
+		</action>
+		<action path="/report/newquery"
+			type="com.agloco.action.AddQueryAction">
+			<forward name="portlet.report.newquery"
+				path="portlet.report.newquery" />
+		</action>
+
+		<!-- DecryptMemberInfo -->
+		<action path="/decryptmemberinfo/decrypt"
+			type="com.agloco.action.DecryptMemberInfoAction"
+			name="decryptMemberInfoForm" scope="request" validate="false">
+			<forward name="portlet.decryptmemberinfo.view"
+				path="portlet.decryptmemberinfo.view" />
+		</action>
+
+		<!-- suspend member -->
+		<action path="/suspend_member/suspend"	type="com.agloco.action.SuspendMemberAction">
+			<forward name="portlet.suspend.member" path="portlet.suspend.member" />
+		</action>
+		
+		<!-- mangage config -->
+		<action path="/manage_config/list" type="com.agloco.action.ManageConfigAction">
+			<forward name="portlet.manage.config" path="portlet.manage.config" />
+		</action>
+
+		<!-- Member Management -->
+		<action path="/membermanagement/view"
+			forward="portlet.membermanagement.view" />
+		<action path="/membermanagement/query" name="memberQueryForm"
+			type="com.agloco.action.MemberManagementAction" scope="request">
+			<forward name="portlet.membermanagement.query"
+				path="portlet.membermanagement.view" />
+		</action>
+		<action path="/membermanagement/detail"
+			type="com.agloco.action.MemberManagementAction">
+			<forward name="portlet.membermanagement.detail"
+				path="portlet.membermanagement.detail" />
+		</action>
+
+		<!-- Send Test Mail -->
+		<action path="/testmail/view" type="com.agloco.action.TestMailAction"
+			name="testMailForm" scope="request" validate="false" parameter="dispatch">
+			<forward name="portlet.testmail.view" path="portlet.testmail.view" />
+		</action>
+		
+		<!-- member send mail -->
+		<action path="/memberSendMail/send"
+			type="com.agloco.action.ReportQueryAction">
+		</action>
+		
+		<!-- manage mail message -->
+		<action path="/manage_mail_queue/list" type="com.agloco.action.ListMailQueueAction">
+			<forward name="portlet.list.mail.queue" path="portlet.list.mail.queue" />
+			<forward name="portlet.view.mail.message" path="portlet.view.mail.message" />
+		</action>
+
+		<!-- log view -->
+		<action path="/log/view" forward="portlet.log.view"/>
+		<action path="/log/query" type="com.agloco.action.LogViewAction" name="logMessageForm">
+			<forward name="portlet.log.view" path="portlet.log.view" />
+		</action>
+
+		<!-- admin user -->
+		<action path="/admin_user/list" type="com.agloco.action.ListAdminUserAction">
+			<forward name="portlet.addmin.user.list" path="portlet.addmin.user.list" />
+			<forward name="portlet.addmin.user.add" path="portlet.addmin.user.add" />
+			<forward name="portlet.addmin.user.edit" path="portlet.addmin.user.edit" />			
+		</action>
+		
+	</action-mappings>
+
+	<!-- Validator Plugin -->
+
+	<!-- plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames" value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml" />
+		</plug-in-->
+</struts-config>

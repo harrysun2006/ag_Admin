@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping package="com.mysql.fooditem1.po">
+	<class name="HFoodItem" table="TT_FoodItem" lazy="true" 
+		dynamic-update="true" dynamic-insert="true"
+	>
+
+	<id name="id" type="java.lang.Long" column="id">
+		<generator class="identity"></generator>
+	</id>
+
+
+	</class>
+</hibernate-mapping>

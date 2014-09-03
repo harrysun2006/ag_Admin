@@ -1,0 +1,5 @@
+#set ($r = $NUM1.doubleValue() + $NUM2.doubleValue())
+#set ($s = $NUM1)
+hello world!$!{RETURN}
+r = $r$!{RETURN}
+s = $s$!{RETURN}

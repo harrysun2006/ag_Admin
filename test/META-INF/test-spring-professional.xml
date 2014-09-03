@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+	<bean class="com.amaxgs.addon.BeanFactoryProcessor"/>
+
+	<bean id="com.test.spring.TestDao" class="com.test.spring.TestDaoHibernate">
+		<property name="sessionFactory">
+			<ref bean="liferaySessionFactory" />
+		</property>
+	</bean>
+	<bean id="com.test.spring.TestServiceImpl" class="com.test.spring.TestServiceImpl">
+		<property name="dao">
+			<ref bean="com.test.spring.TestDao"/>
+		</property>
+	</bean>
+	<bean id="com.test.spring.TestService" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean" lazy-init="true">
+		<property name="transactionManager">
+			<ref bean="liferayTransactionManager" />
+		</property>
+		<property name="target">
+			<ref bean="com.test.spring.TestServiceImpl" />
+		</property>
+		<property name="transactionAttributes">
+			<props>
+				<prop key="*">PROPAGATION_REQUIRED</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="clearDBCacheAfterAdvice" class="com.agloco.spring.ClearDBCacheAfterAdvice"/>
+	<bean id="clearDBCacheAfterAdvisor" class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">
+	   <property name="advice" ref="clearDBCacheAfterAdvice"/>
+	   <property name="patterns">
+	     <list>
+	       <value>.*delete.*</value>
+	       <value>.*approve.*</value>
+	     </list>
+	   </property>
+	</bean>
+</beans>	
